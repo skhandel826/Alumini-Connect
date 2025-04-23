@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .auth-container {
+            display: flex;
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+        
+        .auth-image {
+            flex: 1;
+            background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .auth-image h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .auth-form-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+        
+        .auth-form {
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .auth-form h2 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+        }
+        
+        .forgot-password {
+            display: block;
+            text-align: right;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .auth-btn {
+            width: 100%;
+            padding: 12px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .auth-btn:hover {
+            background: var(--secondary-color);
+        }
+        
+        .auth-switch {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .auth-switch a {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .auth-container {
+                flex-direction: column;
+            }
+            
+            .auth-image {
+                padding: 60px 20px;
+            }
+            
+            .auth-form-container {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+     <!-- Navigation -->
+     <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Alumni<span>Connect</span></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#events">Events</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="login.html" class="btn-login active">Login</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </div>
+    </nav>
+
+    <!-- Auth Container -->
+    <div class="auth-container">
+        <div class="auth-image">
+            <div>
+                <h2>Welcome Back!</h2>
+                <p>Login to access exclusive alumni resources, events, and networking opportunities.</p>
+            </div>
+        </div>
+        <div class="auth-form-container">
+            <div class="auth-form">
+                <h2>Member Login</h2>
+                <form id="loginForm" action="/login" method="POST">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" id="loginEmail" name="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" name="loginPassword" required>
+                    </div>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                    <button type="submit" class="auth-btn">Login</button>
+                    <div class="auth-switch">
+                        Don't have an account? <a href="register.html">Register here</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

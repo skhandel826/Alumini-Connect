@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Alumni Network</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Alumni<span>Connect</span></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#mission">Mission</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="login.html" class="btn-login">Login</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to Our Alumni Network</h1>
+                <p>Connecting past, present, and future generations of our college community</p>
+                <a href="#about" class="btn">Explore More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+                <p>Our history and achievements</p>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="University Campus">
+                </div>
+                <div class="about-text">
+                    <h3>Connecting Alumni Since 2015</h3>
+                    <p>Established in 2025, our alumni network aims to unite graduates through a shared space for networking, mentorship, and ongoing engagement with the university.</p>
+                    <p>Our network facilitates mentorship opportunities, career development, and lifelong learning for all members. We organize regular events and reunions to strengthen these connections.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span>5K+</span>
+                            <p>Alumni</p>
+                        </div>
+                        <div class="stat-item">
+                            <span>3000+</span>
+                            <p>Successful Students</p>
+                        </div>
+                        <div class="stat-item">
+                            <span>50+</span>
+                            <p>Events Yearly</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission section-padding" id="mission">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Mission</h2>
+                <p>What drives our community</p>
+            </div>
+            <div class="mission-cards">
+                <div class="mission-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Connect</h3>
+                    <p>Foster meaningful connections between alumni across generations and disciplines.</p>
+                </div>
+                <div class="mission-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Support</h3>
+                    <p>Support current students through mentorship programs and scholarships.</p>
+                </div>
+                <div class="mission-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Engage</h3>
+                    <p>Engage alumni in the continued growth and success of our university.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events section-padding" id="events">
+        <div class="container">
+            <div class="section-title">
+                <h2>Upcoming Events</h2>
+                <p>Join our community gatherings</p>
+            </div>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-img">
+                        <img src="images/Almni-1.jpg" alt="Alumni Reunion">
+                        <div class="event-date">
+                            <span>15</span>
+                            <p>June</p>
+                        </div> 
+                    </div>
+                    <div class="event-details">
+                        <h3>Annual Alumni Reunion</h3>
+                        <p><i class="far fa-clock"></i> 10:00 AM - 6:00 PM</p>
+                        <p><i class="fas fa-map-marker-alt"></i> C.V.Raman hall , MGICOET</p>
+                        <p>Join us for our biggest event of the year featuring guest speakers, Alumni from batch 2023-2025.</p>
+                        <a href="#" class="btn-small">Register Now</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-img">
+                        <img src="images/induction.jpg" alt="Career Fair">
+                        <div class="event-date">
+                            <span>22</span>
+                            <p>July</p>
+                        </div>
+                    </div>
+                    <div class="event-details">
+                        <h3>Alumni Career Fair</h3>
+                        <p><i class="far fa-clock"></i> 9:00 AM - 4:00 PM</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Ground floor seminar hall, MGICOET</p>
+                        <p>Connect with top employers and explore career opportunities. Open to all alumni and graduating students.</p>
+                        <a href="#" class="btn-small">Register Now</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-img">
+                        <img src="images/mentoring.png" alt="Mentorship Program">
+                        <div class="event-date">
+                            <span>05</span>
+                            <p>Aug</p>
+                        </div>
+                    </div>
+                    <div class="event-details">
+                        <h3>Mentorship Program Kickoff</h3>
+                        <p><i class="far fa-clock"></i> 6:00 PM - 8:00 PM</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Online Event</p>
+                        <p>Launch of our annual mentorship program pairing experienced alumni with current students.</p>
+                        <a href="#" class="btn-small">Register Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="#" class="btn">View All Events</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery section-padding" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Gallery</h2>
+                <p>Moments from our community</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/Almni-1.jpg" alt="Gallery Image 1">
+                    <div class="gallery-overlay">
+                        <h3>2022 Reunion</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/induction.jpg" alt="Gallery Image 2">
+                    <div class="gallery-overlay">
+                        <h3>Career Fair</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mentor.jpg" alt="Gallery Image 3">
+                    <div class="gallery-overlay">
+                        <h3>Mentorship</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Gallery Image 4">
+                    <div class="gallery-overlay">
+                        <h3>Homecoming</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/grad.jpg" alt="Gallery Image 5">
+                    <div class="gallery-overlay">
+                        <h3>Graduation</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/award.jpg" alt="Gallery Image 6">
+                    <div class="gallery-overlay">
+                        <h3>Awards Night</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section-padding" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Alumni Stories</h2>
+                <p>What our members say</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Nandini Jadhao, a proud alumna, kickstarted her professional journey with QualityKiosk through campus placement. Her dedication and hard work continue to inspire students to aim high and believe in their potential.</p>
+                        <div class="testimonial-author">
+                            <img src="images/nandini.jpg" alt="Sarah Johnson">
+                            <div>
+                                <h4>Nandini Jadhao</h4>
+                                <p>Class of 2025, placed in QUALITYKIOSK</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Renuka Patil secured her position at Cryptex through campus placement. Her journey reflects how passion and perseverance can open doors to exciting career opportunities.</p>
+                        <div class="testimonial-author">
+                            <img src="images/renuka.jpg" alt="Michael Chen">
+                            <div>
+                                <h4>Renuka Patil</h4>
+                                <p>Class of 2025, Placed in CRYPTEX</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Prathmesh Tale from CSE not only led the college cricket team as captain but also excelled academically. He secured an internship at EagleByte and later got placed at QualityKiosk, proving that balancing passion and profession truly pays off.</p>
+                        <div class="testimonial-author">
+                            <img src="images/prathmesh.jpg" alt="Priya Patel">
+                            <div>
+                                <h4>Prathmesh Tale</h4>
+                                <p>Class of 2025, Intern at EAGLEBYTE & placed at QUALITYKIOSK</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section-padding" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Mauli Group of Institutions College Of Engineering and Technology , Khamgaon road Shegaon, Sawarna ,Maharashtra 444203</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>maulicoet@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+91-7722027506</p>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29845.77117115426!2d76.61205407431638!3d20.7620834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd7455701ee2aaf%3A0x10c23aa7c5350b92!2sMauli%20College%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1744916838139!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for the latest alumni news and events</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>AlumniConnect</h3>
+                    <p>Connecting generations of university alumni worldwide through events, networking, and shared experiences.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Career Services</a></li>
+                        <li><a href="#">Mentorship Program</a></li>
+                        <li><a href="#">Alumni Benefits</a></li>
+                        <li><a href="#">Volunteer Opportunities</a></li>
+                        <li><a href="#">Give Back</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> MGICOET, Khamgaon Rd, Shegaon , Sawarna, Maharashtra, 444203</li>
+                        <li><i class="fas fa-phone-alt"></i> +91-7722027506</li>
+                        <li><i class="fas fa-envelope"></i> maulicoet@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AlumniConnect. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Alumni Network</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .auth-container {
+            display: flex;
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+        
+        .auth-image {
+            flex: 1;
+            background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .auth-image h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .auth-form-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+        
+        .auth-form {
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .auth-form h2 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+        }
+        
+        .password-strength {
+            height: 5px;
+            background: #eee;
+            border-radius: 5px;
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        
+        .password-strength-bar {
+            height: 100%;
+            width: 0%;
+            background: #ff4757;
+            transition: width 0.3s ease;
+        }
+        
+        .password-requirements {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 5px;
+        }
+        
+        .auth-btn {
+            width: 100%;
+            padding: 12px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .auth-btn:hover {
+            background: var(--secondary-color);
+        }
+        
+        .auth-switch {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .auth-switch a {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .terms-check {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .terms-check input {
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        .terms-check label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .terms-check a {
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .auth-container {
+                flex-direction: column;
+            }
+            
+            .auth-image {
+                padding: 60px 20px;
+            }
+            
+            .auth-form-container {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Alumni<span>Connect</span></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#events">Events</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="login.html" class="btn-login">Login</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </div>
+    </nav>
+
+    <!-- Auth Container -->
+    <div class="auth-container">
+        <div class="auth-image">
+            <div>
+                <h2>Join Our Network</h2>
+                <p>Register to access exclusive alumni resources, events, and networking opportunities.</p>
+            </div>
+        </div>
+        <div class="auth-form-container">
+            <div class="auth-form">
+                <h2>Create Account</h2>
+                <form id="registerForm" action="/register" method="POST">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName"required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">Email Address</label>
+                        <input type="email" id="registerEmail" name="registerEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="graduationYear">Graduation Year</label>
+                        <input type="number" id="graduationYear" min="1900" max="2099" name="graduationYear" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="degree">Degree Program</label>
+                        <input type="text" id="degree" name="degree" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Password</label>
+                        <input type="password" id="registerPassword" name="registerPassword" required>
+                        <div class="password-strength">
+                            <div class="password-strength-bar" id="passwordStrength"></div>
+                        </div>
+                        <div class="password-requirements">
+                            Password must be at least 8 characters with one uppercase, one number, and one special character.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword"  name="confirmPassword" required>
+                    </div>
+                    <div class="terms-check">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                    <button type="submit" class="auth-btn">Register</button>
+                    <div class="auth-switch">
+                        Already have an account? <a href="login.html">Login here</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const registerForm = document.getElementById('registerForm');
+        
+        registerForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+        
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('registerEmail').value.trim();
+            const graduationYear = document.getElementById('graduationYear').value.trim();
+            const degree = document.getElementById('degree').value.trim();
+            const password = document.getElementById('registerPassword').value.trim();
+            const confirmPassword = document.getElementById('confirmPassword').value.trim();
+            const termsChecked = document.getElementById('terms').checked;
+        
+            // Client-side validation
+            if (!firstName || !lastName || !email || !graduationYear || !degree || !password || !confirmPassword) {
+                alert('Please fill in all fields.');
+                return;
+            }
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return;
+            }
+        
+            try {
+                const res = await fetch('/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        firstName,
+                        lastName,
+                        registerEmail: email,
+                        graduationYear,
+                        degree,
+                        registerPassword: password
+                    })
+                });
+        
+                const message = await res.text();
+                alert(message);
+                if (res.ok) {
+                    window.location.href = 'login.html';
+                }
+            } catch (err) {
+                console.error('Error submitting form:', err);
+                alert('Something went wrong. Please try again later.');
+            }
+        });
+        </script>
+        
+</body>
+</html>
